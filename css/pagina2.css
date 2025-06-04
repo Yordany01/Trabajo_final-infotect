@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+.productos-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.productos-submenu li {
+  padding: 0.5rem 1rem;
+}
+
+.productos-submenu a:hover {
+  color: #ffea00;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: url('../IMAGENES/img21.jpg') center/cover no-repeat;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #00ffff;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+  color: #000;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card h2 {
+  margin: 1rem 0 0.5rem;
+  color: #1e3c72;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.contacto {
+  background-color: #111;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.contacto a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.contacto p {
+  margin-bottom: 1rem;
+}
+
+
+.boton-regreso {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.boton-regreso a {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-regreso a:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,97 @@
+/* Reset y fuente base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('IMAGENES/img1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay oscuro para mejorar contraste */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Contenedor central */
+.contenedor {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  max-width: 480px;
+  width: 90%;
+  animation: slideDown 1s ease-out forwards;
+}
+
+/* Título */
+h1 {
+  color: #880e4f;
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 6px rgba(136, 14, 79, 0.4);
+}
+
+/* Botón */
+button {
+  padding: 14px 35px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #00695c, #004d40);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 105, 92, 0.5);
+  transition: all 0.35s ease;
+  font-weight: 700;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #004d40, #002f28);
+  box-shadow: 0 10px 30px rgba(0, 77, 64, 0.7);
+  transform: scale(1.08);
+}
+
+/* Animación */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  .contenedor {
+    padding: 40px 25px;
+  }
+  button {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
