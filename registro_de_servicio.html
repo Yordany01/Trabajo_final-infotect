@@ -1,0 +1,50 @@
+<h2>Registrar Servicio Tecnico</h2>
+<form id="form-servicio" method="POST" action="guardar_servicio.php">
+  <input type="text" name="nombre_cliente" placeholder="Nombre del Cliente" required><br>
+  <input type="tel" name="celular" placeholder="Celular" required><br>
+  <link rel="stylesheet" href="css/registro.css">
+
+
+  <select name="tipo_servicio" required>
+    <option value="">Seleccionar servicio</option>
+    <option value="Mantenimiento de impresora">Mantenimiento de impresora</option>
+    <option value="Instalacion de programas">Instalacion de programas</option>
+    <option value="Revision de laptop">Revision de laptop</option>
+  </select><br>
+
+  <select name="tipo_equipo" id="tipo_equipo" required>
+    <option value="">Tipo de equipo</option>
+    <option value="Laptop">Laptop</option>
+    <option value="PC">PC</option>
+    <option value="Impresora">Impresora</option>
+  </select><br>
+
+  <select name="marca_equipo" id="marca_equipo" required>
+    <option value="">Marca del equipo</option>
+  </select><br>
+
+  <textarea name="descripcion" placeholder="Descripcion del problema"></textarea><br>
+
+  <button type="submit">Registrar</button>
+  <button> <li><a href="index.html">Volver al Inicio</a></li></button>
+</form>
+
+<script>
+  document.getElementById('tipo_equipo').addEventListener('change', function () {
+    const marca = document.getElementById('marca_equipo');
+    const tipo = this.value;
+    marca.innerHTML = ''; 
+
+    let opciones = [];
+    if (tipo === 'Impresora') opciones = ['HP', 'Epson', 'Canon'];
+    else if (tipo === 'Laptop') opciones = ['HP', 'Dell', 'Lenovo'];
+    else if (tipo === 'PC') opciones = ['Asus', 'MSI', 'Gigabyte'];
+
+    opciones.forEach(op => {
+      const option = document.createElement('option');
+      option.value = op;
+      option.textContent = op;
+      marca.appendChild(option);
+    });
+  });
+</script>
