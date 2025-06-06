@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INFOTEC</title>
+  <link rel="stylesheet" href="css/pagina2.css" />
+  <script>
+    function toggleSubmenu() {
+      const submenu = document.querySelector('.productos-submenu');
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.addEventListener('click', function(e) {
+      const submenu = document.querySelector('.productos-submenu');
+      const productosMenu = document.querySelector('.productos-menu > a');
+      if (!productosMenu.contains(e.target) && !submenu.contains(e.target)) {
+        submenu.style.display = 'none';
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li class="productos-menu">
+        <a href="javascript:void(0)" onclick="toggleSubmenu()">Productos</a>
+        <ul class="productos-submenu" style="display:none;">
+          <li><a href="laptop.html">Laptops</a></li>
+          <li><a href="impresoras.html">Impresoras</a></li>
+          <li><a href="computadora.html">Computadoras</a></li>
+        </ul>
+      </li>
+      <li><a href="Nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="registro_de_servicio.html">Registro_Servicios</a></li>
+      <li><a href="consultar_estado.php">consultar_estado</a></li>
+
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>INFOTEC</h1>
+    <p>"La tecnología jamás fue tan fácil"</p>
+    <p>Analizamos tus necesidades para darte soluciones personalizadas.</p>
+  </section>
+
+  <section class="servicios">
+    <div class="card">
+      <img src="IMAGENES/img2.jpg" alt="Soporte Técnico" />
+      <h2>Soporte Técnico</h2>
+      <p>Reparamos, diagnosticamos y optimizamos tu tecnología.</p>
+    </div>
+
+    <div class="card">
+      <img src="IMAGENES/img3.jpg" alt="Productos de Calidad" />
+      <h2>Productos de Calidad</h2>
+      <p>La mejor tecnología: laptops, impresoras y más.</p>
+    </div>
+
+    <div class="card">
+      <img src="IMAGENES/img4.jpg" alt="Delivery Seguro" />
+      <h2>Delivery Seguro</h2>
+      <p>Recibe nuestros productos sin salir de casa, con total seguridad.</p>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <p>Email: <a href="mailto:multiservicios.infoteccix@gmail.com">contacto@infotec.com</a></p>
+    <p>Teléfono: +51 923 213 425</p>
+    <p>Dirección: Ca. Los Mangos 401 V Sector Villa Hermosa, José Leonardo Ortiz - Chiclayo</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.872584825468!2d-79.94415048568519!3d-6.782788066169574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ce00314405db9d%3A0xb2ae87a98e118678!2sCa.%20Los%20Mangos%20401%2C%20José%20Leonardo%20Ortiz%2C%20Chiclayo!5e0!3m2!1ses!2spe!4v1695872556349!5m2!1ses!2spe"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+
+
+</body>
+</html>

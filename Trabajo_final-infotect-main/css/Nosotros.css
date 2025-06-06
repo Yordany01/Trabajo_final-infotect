@@ -1,0 +1,126 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: linear-gradient(135deg, #eaf2f8, #fdfefe);
+}
+header {
+  background-image: url('../IMAGENES/img2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+  padding: 5rem 1rem;
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 800;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.contenido {
+  padding: 2.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1a4b7a;
+  border-bottom: 2px solid #1a4b7a;
+  padding-bottom: 0.4rem;
+}
+
+section p,
+section ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.galeria {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.galeria img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+ul {
+  padding-left: 1.5rem;
+}
+
+
+ul li {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.servicios ul {
+  background: #f0f8ff;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #1a4b7a;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #1a4b7a;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+.boton-regreso {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.boton-regreso a {
+  display: inline-block;
+  background-color: #1a4b7a;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-regreso a:hover {
+  background-color: #14508f;
+  transform: translateY(-2px);
+}
